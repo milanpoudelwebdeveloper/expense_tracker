@@ -1,7 +1,5 @@
-import 'package:flutter/services.dart';
-
-import './transactionCard.dart';
-import './transaction.dart';
+import './widgets/transactionCard.dart';
+import './models/transaction.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -65,20 +63,20 @@ class MyApp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     TextField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Title",
                       ),
                       controller: titleController,
                     ),
                     TextField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Amount",
                       ),
                       controller: amountController,
                     ),
                     TextButton(
-                      onPressed: () => {print(titleController.text)},
-                      child: Text(
+                      onPressed: () => {},
+                      child: const Text(
                         'Add transaction',
                         style: TextStyle(
                           color: Colors.purple,
